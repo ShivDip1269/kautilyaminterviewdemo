@@ -1,0 +1,31 @@
+﻿@model IEnumerable<kautilyaminterviewdemo.Models.Product>
+
+    <h1>All Product List</h1>
+
+    <table class="table table-striped border" >
+        <thead class="bg-black text-white">
+            <tr>
+                <th>Product Id</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Color</th>
+                    <th>Description</th>
+                    <th>DesignCode</th>
+            </tr>
+        </thead>
+        <tbody class="bg-info">
+        @foreach (var proc in Model)
+        {
+            <tr>
+                <td> @proc.ProductId</td>
+                <td> @proc.ProductName</td>
+                <td> @proc.Price</td>
+                <td>@proc.Productcolor</td>
+                <td> @proc.ProductDescription</td>
+                <td>@proc.DesignCode</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+    
